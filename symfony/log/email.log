@@ -1,0 +1,45 @@
+Tue 02 Dec 2014 12:35:53 PM CET,887 [13404] INFO core.email - ========== Message Begins ==========
+
+Time : December 2, 2014, 12:35 pm
+Message Type : Failure
+Message : Sending email failed to xin.cui@cdk.com using smtp. Reason: Connection could not be established with host smtp.sina.com [Connection refused #111]
+
+========== Message Ends ==========
+
+
+Tue 02 Dec 2014 12:36:38 PM CET,163 [13386] INFO core.email - ========== Message Begins ==========
+
+Time : December 2, 2014, 12:36 pm
+Message Type : Failure
+Message : Sending email failed to memorytree@sina.com using smtp. Reason: Connection could not be established with host smtp.sina.com [Connection refused #111]
+
+========== Message Ends ==========
+
+
+Tue 02 Dec 2014 12:36:55 PM CET,801 [13384] INFO core.email - ========== Message Begins ==========
+
+Time : December 2, 2014, 12:36 pm
+Message Type : Failure
+Message : Sending email failed to memorytree@sina.com using smtp. Reason: Connection could not be established with host smtp.sina.com [Connection refused #111]
+
+========== Message Ends ==========
+
+
+Tue 02 Dec 2014 12:39:48 PM CET,467 [13402] INFO core.email - ========== Message Begins ==========
+
+Time : December 2, 2014, 12:39 pm
+Message Type : Failure
+Message : Sending email failed to memorytree@sina.com using smtp. Reason: Connection could not be established with host smtp.sina.com [Connection refused #111]
+
+========== Message Ends ==========
+
+
+Tue 02 Dec 2014 12:40:03 PM CET,506 [13434] INFO core.email - ========== Message Begins ==========
+
+Time : December 2, 2014, 12:40 pm
+Message Type : Failure
+Message : Sending email failed to memorytree@sina.com using smtp. Reason: Connection could not be established with host smtp.sina.com [Connection refused #111]
+
+========== Message Ends ==========
+
+

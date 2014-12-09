@@ -1,0 +1,589 @@
+12/09/14 10:56:20,341 [17176] ERROR core.ConfigDao - Exception in getValue:exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#16 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#17 {main}
+12/09/14 10:56:20,361 [17176] ERROR core.ConfigService - Exception in _getConfigValue:exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#16 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#17 {main}
+
+Next exception 'DaoException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php:76
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#2 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#3 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#4 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#9 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#10 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#11 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#12 {main}
+12/09/14 10:56:20,367 [17176] ERROR filter.ExceptionCatcherFilter - Uncaught Exception: exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#16 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#17 {main}
+
+Next exception 'DaoException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php:76
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#2 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#3 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#4 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#9 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#10 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#11 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#12 {main}
+
+Next exception 'CoreServiceException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php:104
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#2 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#3 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#4 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#10 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#11 {main}
+12/09/14 10:56:20,527 [17176] ERROR core.ConfigDao - Exception in getValue:exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#26 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#27 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#28 {main}
+12/09/14 10:56:20,532 [17176] ERROR core.ConfigService - Exception in _getConfigValue:exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#26 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#27 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#28 {main}
+
+Next exception 'DaoException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php:76
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#2 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#3 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#4 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#10 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#15 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#21 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#22 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#23 {main}
+12/09/14 10:56:20,537 [17176] ERROR filter.ExceptionCatcherFilter - Uncaught Exception: exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#26 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#27 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#28 {main}
+
+Next exception 'DaoException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php:76
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#2 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#3 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#4 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#10 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#15 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#21 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#22 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#23 {main}
+
+Next exception 'CoreServiceException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php:104
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#2 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#3 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#4 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#8 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#15 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#20 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#21 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#22 {main}
+12/09/14 10:56:20,695 [17176] ERROR core.ConfigDao - Exception in getValue:exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#26 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#27 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#28 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#29 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#30 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#31 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#32 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#33 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#34 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#35 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#36 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#37 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#38 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#39 {main}
+12/09/14 10:56:20,702 [17176] ERROR core.ConfigService - Exception in _getConfigValue:exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#26 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#27 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#28 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#29 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#30 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#31 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#32 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#33 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#34 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#35 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#36 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#37 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#38 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#39 {main}
+
+Next exception 'DaoException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php:76
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#2 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#3 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#4 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#10 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#15 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#21 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#25 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#26 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#27 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#28 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#29 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#30 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#31 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#32 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#33 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#34 {main}
+12/09/14 10:56:20,710 [17176] ERROR filter.ExceptionCatcherFilter - Uncaught Exception: exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php:474
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection\Mysql.php(101): Doctrine_Connection->connect()
+#1 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Connection.php(1001): Doctrine_Connection_Mysql->connect()
+#2 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(983): Doctrine_Connection->execute('SELECT h.value ...', Array)
+#3 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\plugins\sfDoctrinePlugin\lib\vendor\doctrine\Doctrine\Query\Abstract.php(1033): Doctrine_Query_Abstract->_execute(Array)
+#4 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php(71): Doctrine_Query_Abstract->execute(Array, 6)
+#5 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#6 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#7 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#9 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#15 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#26 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#27 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#28 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#29 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#30 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#31 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#32 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#33 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#34 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#35 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#36 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#37 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#38 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#39 {main}
+
+Next exception 'DaoException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\dao\ConfigDao.php:76
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(101): ConfigDao->getValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#2 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#3 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#4 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#8 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#10 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#14 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#15 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#19 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#20 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#21 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#25 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#26 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#27 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#28 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#29 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#30 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#31 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#32 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#33 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#34 {main}
+
+Next exception 'CoreServiceException' with message 'PDO Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php:104
+Stack trace:
+#0 C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\service\ConfigService.php(259): ConfigService->_getConfigValue('admin.localizat...')
+#1 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php(47): ConfigService->getAdminLocalizationDefaultLanguage()
+#2 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): OrangeI18NFilter->execute(Object(sfFilterChain))
+#3 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(26): sfFilterChain->execute()
+#4 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#5 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#6 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#7 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#8 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#9 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#10 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#11 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#12 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#13 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#14 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#15 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#16 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#17 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#18 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#19 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(94): sfController->forward('auth', 'login')
+#20 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\filter\sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#21 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#22 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#23 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#24 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#25 C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php(40): sfController->forward('core', 'displayMessage')
+#26 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): ExceptionCatcherFilter->execute(Object(sfFilterChain))
+#27 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(995): sfFilterChain->execute()
+#28 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#29 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(665): sfFilterChain->execute()
+#30 C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php(2352): sfController->forward('auth', 'login')
+#31 C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php(170): sfFrontWebController->dispatch()
+#32 C:\xampp\htdocs\orangehrm\symfony\web\index.php(22): sfContext->dispatch()
+#33 {main}
+[09-Dec-2014 10:56:20 Europe/Berlin] Too many forwards have been detected for this request.
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php on line 76
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP Stack trace:
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\orangehrm\symfony\web\index.php:0
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   2. sfContext->dispatch() C:\xampp\htdocs\orangehrm\symfony\web\index.php:22
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   3. sfFrontWebController->dispatch() C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php:170
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   4. sfController->forward() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:2352
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   5. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:665
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   6. sfRenderingFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   7. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:995
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   8. ExceptionCatcherFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP   9. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php:26
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  10. OrangeI18NFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  11. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php:58
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  12. SessionInfoFetcherFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  13. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\SessionInfoFetcherFilter.php:67
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  14. ohrmAuthorizationFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  15. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\authorization\filter\ohrmAuthorizationFilter.php:46
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  16. ModuleFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  17. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ModuleFilter.php:56
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  18. orangehrmPostExecutionFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  19. PluginExecutionManager::instance() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\filter\orangehrmPostExecutionFilter.php:18
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  20. PluginExecutionManager->__construct() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php:15
+[09-Dec-2014 10:58:56 Europe/Berlin] PHP  21. PluginExecutionManager->_init() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php:47
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php on line 76
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP Stack trace:
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\orangehrm\symfony\web\index.php:0
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   2. sfContext->dispatch() C:\xampp\htdocs\orangehrm\symfony\web\index.php:22
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   3. sfFrontWebController->dispatch() C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php:170
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   4. sfController->forward() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:2352
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   5. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:665
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   6. sfRenderingFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   7. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:995
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   8. ExceptionCatcherFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP   9. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php:26
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  10. OrangeI18NFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  11. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php:58
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  12. SessionInfoFetcherFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  13. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\SessionInfoFetcherFilter.php:67
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  14. ohrmAuthorizationFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  15. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\authorization\filter\ohrmAuthorizationFilter.php:46
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  16. ModuleFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  17. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ModuleFilter.php:56
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  18. orangehrmPostExecutionFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  19. PluginExecutionManager::instance() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\filter\orangehrmPostExecutionFilter.php:18
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  20. PluginExecutionManager->__construct() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php:15
+[09-Dec-2014 11:05:35 Europe/Berlin] PHP  21. PluginExecutionManager->_init() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php:47
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php on line 76
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP Stack trace:
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\orangehrm\symfony\web\index.php:0
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   2. sfContext->dispatch() C:\xampp\htdocs\orangehrm\symfony\web\index.php:22
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   3. sfFrontWebController->dispatch() C:\xampp\htdocs\orangehrm\symfony\lib\vendor\symfony\lib\util\sfContext.class.php:170
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   4. sfController->forward() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:2352
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   5. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:665
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   6. sfRenderingFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   7. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:995
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   8. ExceptionCatcherFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP   9. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ExceptionCatcherFilter.php:26
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  10. OrangeI18NFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  11. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\OrangeI18NFilter.php:58
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  12. SessionInfoFetcherFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  13. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\SessionInfoFetcherFilter.php:67
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  14. ohrmAuthorizationFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  15. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\authorization\filter\ohrmAuthorizationFilter.php:46
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  16. ModuleFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  17. sfFilterChain->execute() C:\xampp\htdocs\orangehrm\symfony\apps\orangehrm\lib\filter\ModuleFilter.php:56
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  18. orangehrmPostExecutionFilter->execute() C:\xampp\htdocs\orangehrm\symfony\cache\orangehrm\dev\config\config_core_compile.yml.php:1031
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  19. PluginExecutionManager::instance() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\filter\orangehrmPostExecutionFilter.php:18
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  20. PluginExecutionManager->__construct() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php:15
+[09-Dec-2014 11:05:49 Europe/Berlin] PHP  21. PluginExecutionManager->_init() C:\xampp\htdocs\orangehrm\symfony\plugins\orangehrmCorePlugin\lib\utility\PluginExecutionManager.php:47

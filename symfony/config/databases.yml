@@ -1,0 +1,22 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;port=3306;dbname=orangehrm_mysql'
+      username: root
+      password: hrmcdk
+      attributes: { export: tables }
+dev:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;port=3306;dbname=test_orangehrm_mysql'
+      username: root
+      password: 1234abcd
+test:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;port=3306;dbname=test_orangehrm_mysql'
+      username: root
+      password: 1234abcd
