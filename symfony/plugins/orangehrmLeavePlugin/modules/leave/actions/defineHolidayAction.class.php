@@ -150,7 +150,8 @@ class defineHolidayAction extends baseLeaveAction {
                         $holidayObject->setRecurring($recurringValue);
 
                         $holidayObject->setLength($post['length']);
-                        $this->getHolidayService()->saveHoliday($holidayObject);                        
+                        $holidayObject->setOperationalCountryId($post['country']);
+                        $this->getHolidayService()->saveHoliday($holidayObject);
 
                         if ($post['id'] != '') {
                             $this->getUser()->setFlash('success', __(TopLevelMessages::UPDATE_SUCCESS));

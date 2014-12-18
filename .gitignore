@@ -1,2 +1,2 @@
-/symfony/app/cache/*
-/symfony/app/logs/*
+/symfony/cache/*
+/symfony/log/*

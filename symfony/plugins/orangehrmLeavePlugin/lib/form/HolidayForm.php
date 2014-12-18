@@ -112,6 +112,7 @@ class HolidayForm extends sfForm {
             $this->setDefault('date', set_datepicker_date_format($holidayObject->getDate()));
             $this->setDefault('recurring', $chkRecurring);
             $this->setDefault('length', $holidayObject->getLength());
+            $this->setDefault('country', $holidayObject->getOperationalCountryId());
         }
     }
 
@@ -167,6 +168,7 @@ class HolidayForm extends sfForm {
                         ), array(
                     'add_empty' => false
                 ));
+        $widgets['country'] = new ohrmWidgetOperationalCountryLocationDropDown();
 
         return $widgets;
     }
@@ -197,6 +199,8 @@ class HolidayForm extends sfForm {
                     'bad_format' => __(ValidationMessages::DATE_FORMAT_INVALID, array('%format%' => get_datepicker_date_format(sfContext::getInstance()->getUser()->getDateFormat())))
                 ));
         $validators['length'] = new sfValidatorChoice(array('choices' => array_keys($this->getDaysLengthList())));
+        $validators['country'] = new sfValidatorChoice(array('choices' => 
+            array_keys((new OperationalCountryService())->getOperationalCountryList())));
 
         return $validators;
     }
@@ -217,6 +221,7 @@ class HolidayForm extends sfForm {
         $labels['date'] = __('Date') . ' ' . $requiredLabel;
         $labels['recurring'] = __('Repeats Annually');
         $labels['length'] = __('Full Day/Half Day');
+        $labels['country'] = __('Operational Country');
 
         return $labels;
     }

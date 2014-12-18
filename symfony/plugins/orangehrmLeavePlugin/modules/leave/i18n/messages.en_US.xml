@@ -424,6 +424,10 @@
     <source>End Day</source>
     <target>End Day</target>
    </trans-unit>      
+   <trans-unit id="104">
+    <source>Operational Country</source>
+    <target>Operational Country</target>
+   </trans-unit>      
   </body>
  </file>
 </xliff>
